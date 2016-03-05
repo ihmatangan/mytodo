@@ -1,0 +1,8 @@
+<h1>Toggle Project</h1>
+<div class="container">
+<input type="button" ng-click="toggle()" value="{{ toggleName }}"><br><br>
+<div>{{ clickStatus }}</div>
+<div><input type="text" value="{{ statusName }}" ng-disabled="{{ 'inputStatus' }}"></div>
+<div style="{{ textStyle }}">Sample text styling</div>
+<div class="animate-show" ng-hide="{{ 'hideStatus' }}">Hide and Show</div>
+</div>

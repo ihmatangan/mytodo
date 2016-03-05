@@ -1,0 +1,7 @@
+<h1>{{ title }}</h1>
+<hr>
+<form name="divname">
+	Name : <input type="text" name="name" ng-model="name" required>
+	<p>Name is Valid? {{ divname.name.$valid }} </p>
+	<span ng-show="divname.name.$valid">Your name is {{ name }}</span>
+</form>

@@ -1,0 +1,30 @@
+<div class="container">
+  <!-- Todos input -->
+  
+    <div class="row">
+      <div class="input-group">
+        <input type="text" ng-model="todo" placeholder="What needs to be done?" class="form-control" required>
+        <span class="input-group-btn">
+          <input type="button" class="btn btn-primary" value="Add" ng-click="addTodo()">
+        </span>
+        <span class="input-group-btn">
+          <input type="button" ng-hide="{{ updateBtn }}" class="btn btn-warning" value="Update" ng-click="updateData()">
+        </span>
+      </div>
+    </div>
+ <br>{{ errormessage }}
+
+    <!-- Todos list -->
+ <div ui-sortable ng-model="todos">   
+ <p class="input-group" ng-repeat="todo in todos" style="padding:5px 10px; cursor:move;">
+  <input type="text" ng-model="todo" class="form-control" ng-disabled="{{ 'idx'+$index }}">
+  <span class="input-group-btn">
+    <button class="btn btn-danger" ng-click="removeTodo($index)" aria-label="Remove">X</button>
+  </span>
+  <span class="input-group-btn">
+    <button class="btn btn-info" ng-click="editTodo($index)" aria-label="Edit" ng-disabled="{{ editbtn }}" >Edit</button>
+  </span>
+
+</p>
+</div>
+</div>
